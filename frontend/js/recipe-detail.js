@@ -21,8 +21,8 @@ const fetchRecipeDetails = async () => {
 
   try {
     
-    const SPOONACULAR_API_KEY = "e1441a600f9f4dd0ab154613e02082b8";
-    const YOUTUBE_API_KEY = "AIzaSyAiRMT04P7M4GthoqvB68sgzOC_fdZsRvU";
+    const SPOONACULAR_API_KEY = "Your_Key";
+    const YOUTUBE_API_KEY = "Your_Key";
 
    
     const response = await fetch(
