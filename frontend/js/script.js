@@ -10,7 +10,7 @@ const fetchRecipes = async (category = "") => {
 
   try {
     
-    const API_KEY = "e1441a600f9f4dd0ab154613e02082b8";
+    const API_KEY = "Your_Key";
     const endpoint = category
       ? `https://api.spoonacular.com/recipes/complexSearch?type=${category}&apiKey=${API_KEY}`
       : `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}`;
