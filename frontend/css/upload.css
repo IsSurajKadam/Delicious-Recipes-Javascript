@@ -1,0 +1,132 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+}
+
+.header {
+  background-color: #222;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+}
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+.upload-recipe {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-recipe h2 {
+  text-align: center;
+  color: #ff8c00;
+}
+
+.upload-recipe form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upload-recipe input, .upload-recipe textarea, .upload-recipe button {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.upload-recipe button {
+  background-color: #ff8c00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.upload-recipe button:hover {
+  background-color: #e67e00;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

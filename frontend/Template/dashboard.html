@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uploader Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header class="navheader">
+    <nav class="navbar">
+      <div class="logo">Delicious Recipes</div>
+      
+      <div class="menu-toggle" id="mobileMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receipe.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="Browse.html">Browse</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="dashboard-container">
+    <header class="header">
+      <div class="profile-photo">
+        <div>
+          <img  alt="" id="Photo" name="Photo">
+        </div>
+        <i class="fa-regular fa-pen-to-square" id="update-profile-btn"></i>
+  
+       </div>
+      <div id="userDetails">
+        <p><strong>Username:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="useremail"></span></p>
+        <button id="update-password-btn" class="update-password">update password</button>
+      </div>
+    </header>
+
+    <section class="recipes">
+      <h2>Your Recipes</h2>
+      <table id="recipeTable">
+        <thead>
+          <tr>
+            <th>Recipe Name</th>
+            <th>Category</th>
+            <th>Posted Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="popup" id="editPopup" style="display: none;">
+    <div class="popup-content">
+      <span id="closePopup">X</span>
+      <h2>Edit Recipe</h2>
+      <form id="editRecipeForm">
+        <label for="recipeTitle">Title:</label>
+        <input type="text" id="recipeTitle" name="title" required>
+
+        <label for="Category">Category:</label>
+        <input type="text" id="Category" name="category" readonly/>
+
+        <label for="recipeIngredients">Ingredients (comma-separated):</label>
+        <textarea id="recipeIngredients" rows="5" name="ingredients" required></textarea>
+
+        <label for="recipeInstructions">Instructions:</label>
+        <textarea id="recipeInstructions" name="instructions" rows="4" required></textarea>
+
+        <button type="submit">Save Changes</button>
+ 
+      </form>
+    </div>
+  </div>
+
+  <section class="reviews-section" id="reviewSection">
+    <h2>Your Reviews</h2>
+    <div id="reviews-container" class="reviews-container">
+
+    </div>
+  </section>
+
+  <div class="popup-container" id="popup-container">
+    <div class="popup1">
+      <h2>Update Profile</h2>
+      <form id="update-profile-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter new username">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter new email">
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" readonly>
+      
+
+        <label for="profilePhoto">Profile Photo:</label>
+        <input type="file" id="profilePhoto" name="profilePhoto">
+
+        <button type="submit">Save Changes</button>
+        <button type="button" id="close-popup-btn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup-container" id="password">
+    <div class="popup1">
+      <h2>Update password</h2>
+      <form id="update-password-form">
+        <div>
+        <label for="oldpassword">OldPassword:</label>
+        <input type="password" id="oldpassword" name="oldpassword" placeholder="Enter old password">
+        <i class="fa-solid fa-eye" id="toggleicon"></i>
+       </div>
+       <div>
+        <label for="newpassword">NewPassword:</label>
+        <input type="password" id="newpassword" name="newpassword" placeholder="Enter new password">
+        <i class="fa-solid fa-eye" id="toggleicon1"></i>
+      </div>
+        <div>
+        <label for="confirmpassword">confirmpassword:</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Enter confirmpassword">
+        <i class="fa-solid fa-eye" id="toggleicon2"></i>
+      </div>
+        <button type="submit">Save Changes</button>
+        <button type="button" id="close-password-popup-btn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <main class="dashboard-container">
+    <h1>Recipe Performance</h1>
+    <div class="chart-container">
+      <canvas id="performanceChart"></canvas>
+    </div>
+  </main>
+  
+  
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

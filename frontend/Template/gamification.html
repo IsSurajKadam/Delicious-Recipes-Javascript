@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamification Dashboard</title>
+  <link rel="stylesheet" href="../css/gamificaton.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Delicious Recipes</div>
+      
+      <div class="menu-toggle" id="mobileMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="Browse.html">Browse</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    
+    <header class="header1">
+      <h1>Gamification Dashboard</h1>
+    </header>
+
+    
+    <section class="stats">
+      <div id="points" class="stat-card">
+        <h2>Points</h2>
+        <p>0</p>
+      </div>
+      <div id="badges" class="stat-card">
+        <h2>Badges</h2>
+        <div class="badge-container"></div>
+      </div>
+    </section>
+
+    
+    <section class="challenges">
+      <h2>Challenges</h2>
+      <div id="challenges" class="challenge-list">
+        <p>Loading challenges...</p>
+      </div>
+    </section>
+
+    
+    <section class="leaderboard">
+      <h2>Leaderboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard">
+          <tr>
+            <td colspan="3">Loading leaderboard...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="../js/gamification.js"></script>
+</body>
+</html>

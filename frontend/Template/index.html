@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Recipes</title>
+  <link rel="stylesheet" href="../css/index.css">
+
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Delicious Recipes</div>
+      <div class="menu-toggle" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receipe.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="saveLater.html">SaveLater</a></li>
+  
+       
+        <li id="uploadButton"><a href="upload.html">Upload</a></li>
+        <li id="browseButton"><a href="Browse.html">Browse</a></li>
+        <li id="loginButton"><a href="login.html">Login</a></li>
+        <li id="signupButton"><a href="signup.html">Signup</a></li>
+        <li class="profile-container" id="profilecontainer">
+          <img src="images/images/download.jpeg" alt="Profile-Photo" id="profilePhoto" class="profile-photo">
+          <div class="profile-dropdown" id="profileDropdown">
+            <a href="dashboard.html" id="dashboardbutton">Dashboard</a>
+            <a href="ViewerDashboard.html" id="ViewerDashboard">Dashboard</a>
+            <a href="gamification.html" id="gamification">Rewards</a>
+           <a href="javascript:void(0);" id="logout" class="logoutButton">Logout</a>
+          </div>
+        </li>
+        
+      </ul>
+
+    </nav>
+    <div class="hero">
+      <h1>Welcome to our Recipe Collection!</h1>
+      <p>Discover mouth-watering recipes to satisfy your cravings.</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Search recipes..." id="searchInput" />
+        <button id="searchButton">Search</button>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+  
+<section class="latest-recipes">
+  <h2>Latest Recipes</h2>
+  <div id="latestRecipesContainer" class="recipe-cards-container">
+    
+  </div>
+</section>
+
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
+  </footer>
+  <script src="../js/index.js"></script>
+</body>
+</html>

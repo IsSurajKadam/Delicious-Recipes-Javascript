@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  background-image: url('/frontend/images/heo-image.jpg');
+
+}
+.main{
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+}
+
+.header {
+  background-color: #222;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  color: white;
+}
+
+.logo {
+  margin-left: 100px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+}
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+.login-container {
+  background-color: #fff;
+ 
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+
+}
+
+h1 {
+  text-align: center;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+#loginForm div
+{
+ 
+  position: relative;
+}
+
+#toggleicon
+{
+  position:absolute;
+  top:40px;
+  right: 0;
+  cursor: pointer;
+  display: none;
+}
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color:#ff8c00;
+}
+.span 
+{
+  margin-top: 10px;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="../css/descrption.css">
+</head>
+<body>
+  
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Delicious Recipes</div>
+      <div class="menu-toggle" id="mobileMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receipe.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="saveLater.html">saveLater</a></li>
+        <li><a href="Browse.html">Browse</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  
+  <section class="recipe-hero">
+    <div class="hero-content">
+      <h1 id="recipeTitle">Loading...</h1>
+      <p id="recipeCategory"></p>
+    </div>
+    <img id="recipeImage" src="" alt="Recipe" class="hero-image">
+  </section>
+
+  
+  <main class="recipe-details-container">
+    <div class="ingredients-section">
+      <h2>Ingredients</h2>
+      <ul id="ingredientsList"></ul>
+    </div>
+    <div class="instructions-section">
+      <h2>Instructions</h2>
+      <p id="instructions"></p>
+    </div>
+  </main>
+
+  
+  <section class="video-section">
+    <h2>Related Recipe Video</h2>
+    <div class="video-container">
+      <iframe id="relatedVideo" width="560" height="315" src="" frameborder="0" allowfullscreen class="video-frame"></iframe>
+    </div>
+  </section>
+
+  
+  <div class="back-btn-container">
+    <a href="receipe.html" class="back-button">← Back to Recipes</a>
+  </div>
+
+
+  
+  <footer class="footer">
+    <p>&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
+  </footer>
+  <script src="../js/recipe-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background-image: url('/frontend/images/heo-image.jpg');
+}
+
+.header {
+  background-color: #222;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  color: white;
+}
+
+.logo {
+  margin-left: 100px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+}
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+.signup-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #ff8c00;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#signupForm div
+{
+ 
+  position: relative;
+}
+
+#toggleicon
+{
+  position:absolute;
+  top:40px;
+  right: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+button {
+  background-color: #ff8c00;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+
+button:hover {
+  background-color: #ff8c00;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}

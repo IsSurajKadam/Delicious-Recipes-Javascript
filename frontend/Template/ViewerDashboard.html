@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="../css/ViewerDashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="navheader">
+    <nav class="navbar">
+      <div class="logo">Delicious Recipes</div>
+      
+      <div class="menu-toggle" id="mobileMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receipe.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="Browse.html">Browse</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="dashboard-container">
+    <header class="header">
+     <div class="profile-photo">
+      <div>
+        <img  alt="" id="Photo" name="Photo">
+      </div>
+      <i class="fa-regular fa-pen-to-square" id="update-profile-btn"></i>
+
+     </div>
+      <div id="userDetails">
+        <p><strong>Username:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="useremail"></span></p>
+        <button id="update-password-btn" class="update-password">update password</button>
+        
+      </div>
+    </header>
+    <section class="reviews-section">
+      <h2>Your Reviews</h2>
+      <div id="reviews-container" class="reviews-container">
+
+      </div>
+    </section>
+  </main>
+  <div class="popup-container" id="popup-container">
+    <div class="popup">
+      <h2>Update Profile</h2>
+      <form id="update-profile-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter new username">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter new email">
+      
+
+        <label for="profilePhoto">Profile Photo:</label>
+        <input type="file" id="profilePhoto" name="profilePhoto">
+
+        <button type="submit">Save Changes</button>
+        <button type="button" id="close-popup-btn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="popup-container" id="password">
+    <div class="popup">
+      <h2>Update password</h2>
+      <form id="update-password-form">
+        <div>
+        <label for="oldpassword">OldPassword:</label>
+        <input type="password" id="oldpassword" name="oldpassword" placeholder="Enter old password">
+        <i class="fa-solid fa-eye" id="toggleicon"></i>
+       </div>
+       <div>
+        <label for="newpassword">NewPassword:</label>
+        <input type="password" id="newpassword" name="newpassword" placeholder="Enter new password">
+        <i class="fa-solid fa-eye" id="toggleicon1"></i>
+      </div>
+        <div>
+        <label for="confirmpassword">confirmpassword:</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Enter confirmpassword">
+        <i class="fa-solid fa-eye" id="toggleicon2"></i>
+      </div>
+        <button type="submit">Save Changes</button>
+        <button type="button" id="close-password-popup-btn">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/ViewerDashboard.js">
+  
+  </script>
+</body>
+</html>

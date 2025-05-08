@@ -1,0 +1,268 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-image: url('/frontend/images/heo-image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff6347;
+}
+
+#loginButton,#signupButton
+{
+  padding: 5px 10px;
+  background-color: orange;
+}
+#viewerlogout
+{
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+
+
+
+.nav-links .profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.profile-container
+{
+  display: none;
+}
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  height: 150px;
+  width: 200px;
+  padding: 10px;
+}
+
+.profile-dropdown .logoutbutton
+{
+  color:white;
+  background-color: orange;
+}
+.profile-dropdown.visible {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-dropdown a {
+  display: block;
+ margin: 10px 0px;
+  color: #333;
+  text-decoration: none;
+}
+
+.profile-dropdown a:hover {
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+
+.hero h1 {
+  padding-top: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-bar input {
+  padding: 10px;
+ width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #e5533d;
+}
+
+.latest-recipes {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.recipe-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.recipe-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.recipe-card button {
+  padding: 10px 15px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.recipe-card button:hover {
+  background-color: #e5533d;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .recipe-cards-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 29px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    text-align: center;
+    transform: translateY(-100%);
+  }
+
+  .nav-links.show {
+    display: flex;
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+}
+@media(max-width:468px)
+{
+  .recipe-cards-container{
+    grid-template-columns: 1fr;
+  }
+}

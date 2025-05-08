@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>upload Recipe</title>
+  <link rel="stylesheet" href="../css/upload.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Delicious Recipes</div>
+      
+      <div class="menu-toggle" id="mobileMenu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="receipe.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="Browse.html">Browse</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="upload-recipe">
+    <h2>Upload a New Recipe</h2>
+    <form id="uploadForm">
+      <input type="text" name="title" placeholder="Recipe Title" required />
+      <input type="text" name="category" placeholder="Category" required />
+      <textarea name="ingredients" placeholder="Ingredients (comma-separated)" required></textarea>
+      <textarea name="instructions" placeholder="Instructions" required></textarea>
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">Upload Recipe</button>
+    </form>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2024 Delicious Recipes. All Rights Reserved.</p>
+  </footer>
+  <script src="../js/upload.js"></script>
+  
+</body>
+</html>
