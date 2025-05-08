@@ -56,8 +56,8 @@ Below are screenshots of the application interface:
 1. Clone the repository:
 
    ```sh
-    https://github.com/IsSurajKadam/Delicious-Recipes-Javascript.git
-    cd Delicious-Recipes-Javascript
+   [https://github.com/IsSurajKadam/recipe-app-javascript.git]
+    cd recipe-app-javascript
    ```
 
 2. Install backend dependencies:
