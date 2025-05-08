@@ -118,7 +118,7 @@ const fetchLatestRecipes = async () => {
   latestRecipesContainer.innerHTML = `<p>Loading latest recipes...</p>`;
 
   try {
-    const API_KEY = "e1441a600f9f4dd0ab154613e02082b8";
+    const API_KEY = "Your_Key";
     const response = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?number=8&sort=popularity&apiKey=${API_KEY}`
     );
@@ -146,7 +146,7 @@ const searchRecipes = async (query) => {
   latestRecipesContainer.innerHTML = `<p>Searching recipes...</p>`;
 
   try {
-    const API_KEY = "e1441a600f9f4dd0ab154613e02082b8";
+    const API_KEY = "Your_Key";
     const response = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=8&apiKey=${API_KEY}`
     );
